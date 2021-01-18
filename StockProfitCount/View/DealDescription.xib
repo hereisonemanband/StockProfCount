@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchReusableCell" rowHeight="374" id="KGk-i7-Jjw" customClass="DealDescriptionCell" customModule="StockProfitCount" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="700" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="700" height="300"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="mTP-JF-gkD">
+                        <rect key="frame" x="0.0" y="0.0" width="700" height="302"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lkb-ho-X35" userLabel="TitleView">
+                                <rect key="frame" x="0.0" y="0.0" width="700" height="100"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название компанииъ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndo-Hs-Ez7">
+                                        <rect key="frame" x="0.0" y="0.0" width="170.5" height="100"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="ndo-Hs-Ez7" secondAttribute="trailing" constant="658.5" id="Oyy-Th-8er"/>
+                                    <constraint firstItem="ndo-Hs-Ez7" firstAttribute="leading" secondItem="Lkb-ho-X35" secondAttribute="leading" id="PPR-tD-W1d"/>
+                                    <constraint firstItem="ndo-Hs-Ez7" firstAttribute="top" secondItem="Lkb-ho-X35" secondAttribute="top" id="TK2-EW-cof"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="YGt-0F-BpS"/>
+                                    <constraint firstAttribute="bottom" secondItem="ndo-Hs-Ez7" secondAttribute="bottom" id="k49-8Q-JlE"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjE-Zr-9QK" userLabel="DescPriceView">
+                                <rect key="frame" x="0.0" y="101" width="700" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="65" translatesAutoresizingMaskIntoConstraints="NO" id="C5E-lj-0Nj">
+                                        <rect key="frame" x="0.0" y="0.0" width="700" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена в USD за шт" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFb-7z-0tP">
+                                                <rect key="frame" x="0.0" y="0.0" width="317.5" height="100"/>
+                                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" placeholder="Кол-во" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fa0-LO-WaY">
+                                                <rect key="frame" x="382.5" y="0.0" width="317.5" height="100"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                                <connections>
+                                                    <action selector="quantityDidChanged:" destination="KGk-i7-Jjw" eventType="editingChanged" id="YFf-Fz-1vi"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="C5E-lj-0Nj" secondAttribute="trailing" id="0pV-0T-CaB"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="7Ts-XH-elE"/>
+                                    <constraint firstItem="C5E-lj-0Nj" firstAttribute="leading" secondItem="KjE-Zr-9QK" secondAttribute="leading" id="JmN-ZI-xai"/>
+                                    <constraint firstAttribute="bottom" secondItem="C5E-lj-0Nj" secondAttribute="bottom" id="SKO-CS-XKa"/>
+                                    <constraint firstItem="C5E-lj-0Nj" firstAttribute="top" secondItem="KjE-Zr-9QK" secondAttribute="top" id="ezP-Lh-CU8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cUm-uv-Fla" userLabel="SummView">
+                                <rect key="frame" x="0.0" y="202" width="700" height="100"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="Gmd-0T-Ek1">
+                                        <rect key="frame" x="0.0" y="0.0" width="700" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Цена доллара в момент покупки " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sb8-e9-Gyc">
+                                                <rect key="frame" x="0.0" y="0.0" width="318" height="100"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Общая сумма" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7d-or-zSX">
+                                                <rect key="frame" x="382" y="0.0" width="318" height="100"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Gmd-0T-Ek1" firstAttribute="top" secondItem="cUm-uv-Fla" secondAttribute="top" id="3Mg-r9-1Qh"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="YO7-dT-eID"/>
+                                    <constraint firstItem="Gmd-0T-Ek1" firstAttribute="leading" secondItem="cUm-uv-Fla" secondAttribute="leading" id="YOd-85-qpS"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gmd-0T-Ek1" secondAttribute="bottom" id="fht-vN-TyQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gmd-0T-Ek1" secondAttribute="trailing" id="u4l-LS-mxd"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mTP-JF-gkD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="0jN-mR-d0u"/>
+                    <constraint firstAttribute="trailing" secondItem="mTP-JF-gkD" secondAttribute="trailing" id="RmC-lQ-19c"/>
+                    <constraint firstAttribute="bottom" secondItem="mTP-JF-gkD" secondAttribute="bottom" id="RxZ-09-Vhb"/>
+                    <constraint firstItem="mTP-JF-gkD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zms-mr-QkZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dollarPriceinBuyMoment" destination="Sb8-e9-Gyc" id="LpK-Ff-dhc"/>
+                <outlet property="paperCompanyNameLabel" destination="ndo-Hs-Ez7" id="7XH-pU-4qH"/>
+                <outlet property="paperStockCount" destination="fa0-LO-WaY" id="kOo-iu-z3d"/>
+                <outlet property="paperStockPrice" destination="KFb-7z-0tP" id="CUu-Ab-gZ6"/>
+                <outlet property="quantityLabelText" destination="fa0-LO-WaY" id="MOa-C0-NSS"/>
+                <outlet property="summLabel" destination="x7d-or-zSX" id="6kk-Ws-bZX"/>
+            </connections>
+            <point key="canvasLocation" x="113" y="65"/>
+        </tableViewCell>
+    </objects>
+</document>
